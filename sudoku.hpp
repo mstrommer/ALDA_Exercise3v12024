@@ -20,5 +20,6 @@ int setValueInField(int value, int row, int col);
 int removeValueFromField(int row, int col);
 int getValueFromField(int row, int col);
 int solve(int row, int col);
+int countSolutions(int row, int col);
 
 #endif /* _SUDOKU_H_ */

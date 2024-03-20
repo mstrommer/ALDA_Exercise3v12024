@@ -144,10 +144,16 @@ int getValueFromField(int row, int col) {
 	return field[row][col];
 }
 
-/* Return true if you've found a valid solution for the sudoku. Use the
+/* TODO
+ * Return true if you've found a valid solution for the sudoku. Use the
  * return value to abort the backtracking algorithm if you've found the
  * first solution, otherwise you would search for a possible solution. */
 int solve( int row, int col ) {
     return -1;
 }
 
+/* TODO
+ * Returns the number of possible solutions of a Sudoku */
+int countSolutions(int row, int col){
+    return -1;
+}

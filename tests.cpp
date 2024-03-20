@@ -120,3 +120,47 @@ TEST_CASE("Test3", "Sudoku")
     INFO("Test Case: return value not correct.");
     REQUIRE(result == 0);
 }
+
+TEST_CASE("Test4", "Solution Count")
+{
+    int result = 0;
+    int initial[SIZE][SIZE] = {
+        {5, 0, 0, 6, 0, 0, 7, 0, 0},
+        {0, 0, 0, 0, 3, 0, 0, 0, 0},
+        {0, 6, 0, 0, 2, 0, 0, 5, 0},
+        {0, 0, 1, 5, 0, 0, 0, 0, 0},
+        {0, 7, 0, 0, 6, 0, 0, 0, 0},
+        {0, 0, 0, 2, 0, 0, 0, 3, 8},
+        {3, 0, 0, 0, 0, 8, 9, 0, 4},
+        {0, 1, 5, 4, 0, 0, 0, 0, 0},
+        {0, 4, 7, 0, 0, 0, 0, 0, 0},
+    };
+    int expected = 69;
+    init(initial);
+    result = countSolutions(0,0);
+    INFO("Test Case: Solution Counter failed.");
+    INFO("Return value not correct.");
+    REQUIRE(result == expected);
+}
+
+TEST_CASE("Test5", "Solution Count")
+{
+    int result = 0;
+    int initial[SIZE][SIZE] = {
+        {0, 1, 0, 0, 0, 9, 0, 5, 0},
+        {0, 9, 0, 0, 0, 0, 4, 8, 0},
+        {0, 6, 0, 1, 0, 4, 0, 0, 0},
+        {0, 0, 5, 0, 0, 0, 9, 3, 0},
+        {0, 0, 0, 7, 0, 2, 0, 0, 0},
+        {0, 2, 1, 0, 0, 0, 8, 0, 0},
+        {4, 0, 0, 0, 8, 0, 6, 0, 9},
+        {0, 0, 0, 0, 6, 0, 5, 0, 3},
+        {2, 0, 0, 0, 3, 0, 0, 0, 0},
+    };
+    int expected = 1;
+    init(initial);
+    result = countSolutions(0,0);
+    INFO("Test Case: Solution Counter failed.");
+    INFO("Return value not correct.");
+    REQUIRE(result == expected);
+}
